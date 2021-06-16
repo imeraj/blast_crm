@@ -14,6 +14,10 @@
     <%= link_to 'BlastCRM', root_path, class: 'navbar-brand' %>
   </nav>
 
+  <% flash.each do |key, value| %>
+    <div class="<%= flash_class(key.to_sym) %>"><%= value %></div>
+  <% end %>
+
   <%= yield %>
 
 </body>
