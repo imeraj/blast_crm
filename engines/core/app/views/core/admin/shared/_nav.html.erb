@@ -1,0 +1,14 @@
+<ul class="nav nav-pills float-right">
+  <li class="nav-item">
+    <%= link_to 'Dashboard', core.admin_path,
+                class: "nav-link #{active(admin_path)}" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to core.admin_users_path,
+                class: "nav-link #{active(admin_users_path)}" do %>
+      Users
+      <span class="badge">(<%= Core::User.count %>)</span>
+    <% end %>
+  </li>
+</ul>

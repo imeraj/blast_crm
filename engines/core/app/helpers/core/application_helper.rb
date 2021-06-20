@@ -11,6 +11,10 @@ module Core
       FLASH_CLASSES[level]
     end
 
+    def active_admin(path)
+      return 'active' if path.split("/").second == "admin"
+    end
+
     def active(path)
       current_page?(path) ? 'active' : ''
     end

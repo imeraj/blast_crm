@@ -35,6 +35,13 @@
               <%= link_to 'My Account', edit_user_registration_path,
                           class: "nav-link" %>
             </li>
+
+           <% if current_user.admin? %>
+              <li class="nav-item <%= active_admin(request.path) %>">
+                <%= link_to 'Admin', admin_path, class: "nav-link" %>
+              </li>
+            <% end %>
+
             <li class="nav-item">
               <%= link_to 'Logout', destroy_user_session_path,
                           class: "nav-link", method: :delete %>
