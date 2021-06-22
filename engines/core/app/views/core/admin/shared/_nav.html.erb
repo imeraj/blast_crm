@@ -8,7 +8,7 @@
     <%= link_to core.admin_users_path,
                 class: "nav-link #{active(admin_users_path)}" do %>
       Users
-      <span class="badge">(<%= Core::User.count %>)</span>
+      <span class="badge">(<%= @users_count %>)</span>
     <% end %>
   </li>
 </ul>

@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'jquery-rails', '~> 4.3.3'
   spec.add_dependency 'sass-rails', '~> 5.0'
   spec.add_dependency 'devise', '~> 4.6.2'
+  spec.add_dependency 'pundit', '~> 2.0.1'
 
   spec.add_development_dependency 'bootsnap', '>= 1.1.0'
   spec.add_development_dependency 'database_cleaner', '~> 1.7.0'

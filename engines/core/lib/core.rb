@@ -1,4 +1,5 @@
 require 'devise'
+require 'pundit'
 require "core/engine"
 require 'sass-rails'
 require 'bootstrap'

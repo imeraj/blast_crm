@@ -17,7 +17,7 @@
 
       <table class="table table-bordered mb-0">
         <tbody>
-        <%- Core::User.ordered.limit(3).each do |user| %>
+        <%- @users.each.each do |user| %>
           <tr>
             <td><%= user.id %></td>
             <td><%= user.email %></td>
