@@ -2,7 +2,10 @@ PATH
   remote: engines/contacts
   specs:
     contacts (0.1.0)
+      bootstrap (~> 4.3.1)
+      jquery-rails (~> 4.3.3)
       rails (~> 5.2.6)
+      sass-rails (~> 5.0)
 
 PATH
   remote: engines/core
