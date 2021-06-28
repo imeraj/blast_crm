@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_234113) do
+ActiveRecord::Schema.define(version: 2021_06_28_123258) do
 
   create_table "contacts_contacts", force: :cascade do |t|
     t.string "first_name"
@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(version: 2021_06_22_234113) do
     t.boolean "admin", default: false
     t.index ["email"], name: "index_core_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_core_users_on_reset_password_token", unique: true
+  end
+
+  create_table "tasks_tasks", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "user_id"
+    t.integer "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_tasks_tasks_on_contact_id"
+    t.index ["user_id"], name: "index_tasks_tasks_on_user_id"
   end
 
 end
