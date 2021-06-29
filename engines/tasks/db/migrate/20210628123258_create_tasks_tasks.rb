@@ -3,8 +3,8 @@ class CreateTasksTasks < ActiveRecord::Migration[5.2]
     create_table :tasks_tasks do |t|
       t.string :title
       t.text :content
-      t.references :user, foreign_key: { to_table: :core_users }
-      t.references :contact, foreign_key: { to_table: :contacts_contact }
+      t.integer :user_id
+      t.integer :contact_id
 
       t.timestamps
     end

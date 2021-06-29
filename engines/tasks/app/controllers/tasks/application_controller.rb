@@ -1,5 +1,5 @@
 module Tasks
-  class ApplicationController < ActionController::Base
+  class ApplicationController < Core::ApplicationController
     protect_from_forgery with: :exception
   end
 end

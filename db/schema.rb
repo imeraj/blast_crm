@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(version: 2021_06_28_123258) do
     t.integer "contact_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["contact_id"], name: "index_tasks_tasks_on_contact_id"
-    t.index ["user_id"], name: "index_tasks_tasks_on_user_id"
   end
 
 end
