@@ -12,6 +12,7 @@
     <th>ID</th>
     <th>Title</th>
     <th>Content</th>
+    <th>Contact</th>
     <th>Created At</th>
     <th></th>
     </thead>
@@ -21,6 +22,7 @@
         <td><%= task.id %></td>
         <td><%= task.title %></td>
         <td><%= task.content %></td>
+        <td><%= task.contact.email if task.contact.present? %></td>
         <td><%= task.created_at.strftime("%d %b. %Y") %></td>
         <td>
           <%= link_to 'Show', task, class: 'btn btn-primary' %>
